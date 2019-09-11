@@ -39,7 +39,7 @@
     </div>
   </div>
 </div>
-    <header class="header">
+    <header class="header header_js">
   <div class="container">
     <div class="header__wrap-block">
       <div class="header__block">
@@ -62,18 +62,21 @@
           <div class="header__wrap-btn"> <a class="header__button header__button-desktop button button-arrow"
               href="#">Submit Your Idea Now</a>
           </div>
-        </div>    
+        </div>
+
+        <div class="header__burger header__burger_js">
+          <div class="header__burger-line"></div>
+          <div class="header__burger-line"></div>
+          <div class="header__burger-line"></div>
+          <div class="header__burger-line"></div>
+        </div>
+
       </div>
       <div class="header__wrap-btn">
         <a class="header__button header__button-mobile button button-arrow" href="#">Submit Your Idea Now</a>
       </div>
     </div>
-</header>
-    <div class="hamburger">
-  <div class="hamburger-line"></div>
-  <div class="hamburger-line"></div>
-  <div class="hamburger-line"></div>
-</div>    
+</header> 
 
     <section class="section-top section-top_who-we-do">
       <div class="container">
@@ -172,7 +175,7 @@
     </div>
   </div>
 </section> 
-      <div class="call-us-today">
+      <section class="call-us-today">
   <div class="container">
     <div class="call-us-today__block">
       <div class="call-us-today__content">
@@ -193,7 +196,7 @@
       </div>
     </div>
   </div>
-</div>
+</section>
       <section class="slide-reviews">
   <div class="container">
     <div class="slide-reviews__block">
@@ -258,7 +261,7 @@
     </div>
   </div>
 </section>
-      <div class="blog-news">
+      <section class="blog-news">
   <div class="container">
     <div class="blog-news__block">
       <h2 class="blog-news__title title_h2">The Latest News From Our Blog</h2>
@@ -362,22 +365,20 @@
 </a>
             </div>
           </div>
-        </div>
-        <!-- Add Pagination -->
+        </div> 
         <div class="swiper-pagination-post"></div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
     </main>
 
-    <div class="footer-wrap">
-  <footer class="footer">
-    <div class="container" id="footer">
-      <div class="footer__block">
-        <div class="footer__row_nav footer__row">
-          <nav class="footer__nav">
+    <footer class="footer">
+  <div class="container" id="footer">
+    <div class="footer__block">
+      <div class="footer__row_nav footer__row">
+        <nav class="footer__nav">
   <a class="footer__link link link_nav" href="who-we-are.html">Who We Are</a>
   <a class="footer__link link link_nav" href="what-we-do.html">What We Do</a>
   <a class="footer__link link link_nav" href="patenting-process.html">Patenting Process</a>
@@ -386,49 +387,47 @@
   <a class="footer__link link link_nav" href="#">Contact</a>
   <a class="footer__link link link_nav" href="#">Blog</a>
 </nav>
-          <div class="footer__wrap-btn"><a class="footer__button button button-arrow" href="#">Submit Your Idea Now</a>
-          </div>
+        <div class="footer__wrap-btn"><a class="footer__button button button-arrow" href="#">Submit Your Idea Now</a>
+        </div>
+      </div>
+
+      <div class="footer__row_logo footer__row">
+        <div class="footer__box-logo">
+          <a href="#" class="footer__logo-BBB footer__logo"></a>
+          <a href="#" class="footer__logo-NAPP footer__logo"></a>
         </div>
 
-        <div class="footer__row_logo footer__row">
-          <div class="footer__box-logo">
-            <a href="#" class="footer__logo-BBB footer__logo"></a>
-            <a href="#" class="footer__logo-NAPP footer__logo"></a>
-          </div>
-
-          <div class="footer__social-links social-links">
+        <div class="footer__social-links social-links">
   <a href="#" class="footer__social-link social-link"></a>
   <a href="#" class="footer__social-link social-link"></a>
   <a href="#" class="footer__social-link social-link"></a>
   <a href="#" class="footer__social-link social-link"></a>
 </div>
-
-        </div>
-
-        <div class="footer__row_rating footer__row">
-          <p class="footer__text footer__text_rating">Company rating:</p>
-          <div class="footer__box-stars">
-            <div class="footer__star"></div>
-            <div class="footer__star"></div>
-            <div class="footer__star"></div>
-            <div class="footer__star"></div>
-            <div class="footer__star"></div>
-          </div>
-        </div>
-        <!-- footer__star-activ-js -->
-        <div class="footer__row_address footer__row">
-          <p class="footer__text footer__text_address">Benjamin Williams, Registered Patent Agent, Reg. No. 70416</p>
-        </div>
-
-        <div class="footer__row_contacts footer__row">
-          <a href="tel:1-888-357-1068" class="footer__phone">Office: 1-888-357-1068. Fax: (720) 328-5297</a>
-          <p class="footer__text footer__text_contacts">Web Design – Direct Line Development</p>
-        </div>
 
       </div>
+
+      <div class="footer__row_rating footer__row">
+        <p class="footer__text footer__text_rating">Company rating:</p>
+        <div class="footer__box-stars">
+          <div class="footer__star"></div>
+          <div class="footer__star"></div>
+          <div class="footer__star"></div>
+          <div class="footer__star"></div>
+          <div class="footer__star"></div>
+        </div>
+      </div> 
+      <div class="footer__row_address footer__row">
+        <p class="footer__text footer__text_address">Benjamin Williams, Registered Patent Agent, Reg. No. 70416</p>
+      </div>
+
+      <div class="footer__row_contacts footer__row">
+        <a href="tel:1-888-357-1068" class="footer__phone">Office: 1-888-357-1068. Fax: (720) 328-5297</a>
+        <p class="footer__text footer__text_contacts">Web Design – Direct Line Development</p>
+      </div>
+
     </div>
-  </footer>
-</div>
+  </div>
+</footer>
   </div>
 
   </div>
