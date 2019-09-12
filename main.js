@@ -1,7 +1,6 @@
-
+// анимация фона при скроле на 60 строчке , вызывается если страница не index
 // scrollAnchor();      // скрол у якоря
 chechURL();
-scrollBgFilter()
 preloader();
 headerFidex();// фиксация header при скроле
 slideReviews();
@@ -56,7 +55,22 @@ function slideSpecialists() {
 }
 
 
+if (window.location.pathname != "/index.html") {
+   let scrollBgFilter = () => {
+      const bgSite = document.querySelector(".bg-site");
+      window.addEventListener("scroll", () => {
+         let filter = window.pageYOffset / 1200;
 
+         let scale = window.pageYOffset / 15000;
+         scale++ ;
+         if (scale < 1) scale = 1;
+         bgSite.style.filter = `blur(${filter}px)`;
+
+         bgSite.style.transform = `scale(${scale})`;
+      })
+   }
+   scrollBgFilter();
+}
 
 
 
@@ -65,9 +79,9 @@ function scrollAnchor() {
 
    for (let anchor of anchors) {
       anchor.addEventListener('click', function (e) {
-         e.preventDefault()
+         e.preventDefault();
 
-         const blockID = anchor.getAttribute('href')
+         const blockID = anchor.getAttribute('href');
 
          document.querySelector('' + blockID).scrollIntoView({
             behavior: 'smooth',
@@ -267,19 +281,25 @@ function preloader() {
 }
 
 
-function scrollBgFilter() {
-   const bgSite = document.querySelector(".bg-site");
-   window.addEventListener("scroll", () => {
-      let filter = window.pageYOffset / 1200;
 
-      let scale = window.pageYOffset / 15000; 
-      scale  ++
-      console.log(scale);
-      if (scale < 1) scale = 1
-      bgSite.style.filter = `blur(${filter}px)`;
-     
-      bgSite.style.transform = `scale(${scale})`
-   })
-}
+
+
+
+
+// scrollBgFilter()
+// function scrollBgFilter() {
+//    const bgSite = document.querySelector(".bg-site");
+//    window.addEventListener("scroll", () => {
+//       let filter = window.pageYOffset / 1200;
+
+//       let scale = window.pageYOffset / 15000;
+//       scale++
+//       console.log(scale);
+//       if (scale < 1) scale = 1
+//       bgSite.style.filter = `blur(${filter}px)`;
+
+//       bgSite.style.transform = `scale(${scale})`
+//    })
+// }
 
 
