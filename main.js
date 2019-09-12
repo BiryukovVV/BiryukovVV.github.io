@@ -1,9 +1,9 @@
 // scrollAnchor();      // скрол у якоря
 rating();            // рейтинг компании
 slideReviews();
-sliderPost()
-slideSpecialists()
-headerFidex()  // фиксация header при скроле
+sliderPost();
+slideSpecialists();
+headerFidex();// фиксация header при скроле
 function slideReviews() {
    var swiper = new Swiper('.swiper-container-reviews', {
       spaceBetween: 30,
@@ -75,20 +75,20 @@ function scrollAnchor() {
 
 const burger = document.getElementsByClassName("header__burger_js")[0];
 const menuModal = document.getElementsByClassName("menu-mobile")[0];
-const lineBurge1 = document.getElementsByClassName("header__burger-line")[0]
-const lineBurge2 = document.getElementsByClassName("header__burger-line")[1]
-const lineBurge3 = document.getElementsByClassName("header__burger-line")[2]
-const lineBurge4 = document.getElementsByClassName("header__burger-line")[3]
+const lineBurge1 = document.getElementsByClassName("header__burger-line")[0];
+const lineBurge2 = document.getElementsByClassName("header__burger-line")[1];
+const lineBurge3 = document.getElementsByClassName("header__burger-line")[2];
+const lineBurge4 = document.getElementsByClassName("header__burger-line")[3];
 
 // header__burger-line_active
 
 burger.onclick = function () {
    menuModal.classList.toggle("menu-mobile-open-js");
    document.body.classList.toggle("open-menu")
-   lineBurge1.classList.toggle("header__burger-line_active")
-   lineBurge2.classList.toggle("header__burger-line_active")
-   lineBurge3.classList.toggle("header__burger-line_active")
-   lineBurge4.classList.toggle("header__burger-line_active")
+   lineBurge1.classList.toggle("header__burger-line_active");
+   lineBurge2.classList.toggle("header__burger-line_active");
+   lineBurge3.classList.toggle("header__burger-line_active");
+   lineBurge4.classList.toggle("header__burger-line_active");
 }
 
 function rating() {
@@ -151,36 +151,36 @@ function rating() {
    star_1.onmouseover = function () {
       if (!checkClickStars) {
          quantity = 1;
-         removeStar()
-         targetStar(quantity)
+         removeStar();
+         targetStar(quantity);
       }
    }
    star_2.onmouseover = function () {
       if (!checkClickStars) {
          quantity = 2;
-         removeStar()
-         targetStar(quantity)
+         removeStar();
+         targetStar(quantity);
       }
    }
    star_3.onmouseover = function () {
       if (!checkClickStars) {
          quantity = 3;
-         removeStar()
-         targetStar(quantity)
+         removeStar();
+         targetStar(quantity);
       }
    }
    star_4.onmouseover = function () {
       if (!checkClickStars) {
          quantity = 4;
-         removeStar()
-         targetStar(quantity)
+         removeStar();
+         targetStar(quantity);
       }
    }
    star_5.onmouseover = function () {
       if (!checkClickStars) {
          quantity = 5;
-         removeStar()
-         targetStar(quantity)
+         removeStar();
+         targetStar(quantity);
       }
    }
 
@@ -208,15 +208,13 @@ function rating() {
 
 
 function headerFidex() {
-   const header = document.getElementsByClassName("header_js")[0]
+   const header = document.getElementsByClassName("header_js")[0];
    window.addEventListener("scroll", (e) => {
-      console.log(window.pageYOffset);
       if (window.pageYOffset > 180) {
-         console.log(true);
-         header.classList.add("header_fixed")
+         header.classList.add("header_fixed");
       }
       else {
-         header.classList.remove("header_fixed")
+         header.classList.remove("header_fixed");
       }
 
    })
@@ -225,3 +223,6 @@ function headerFidex() {
 
 
 
+window.onload = () => {
+   console.log(true);
+}
