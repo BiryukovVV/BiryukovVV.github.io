@@ -1,6 +1,6 @@
 // scrollAnchor();      // скрол у якоря
 chechURL();
-preloader();
+
 headerFidex();// фиксация header при скроле
 slideReviews();
 sliderPost();
@@ -244,17 +244,24 @@ function chechURL() {
 }
 
 
+preloader();
 
-
-function preloader(params) {
+function preloader() {
    const body = document.body;
    const preloader = document.getElementsByClassName("preloader_js")[0];
-
+   const preloaderItem = document.querySelectorAll(".preloader__semicircle_js")
    body.classList = "page-loading";
-
    window.onload = () => {
+
+      preloader.style.background = "rgba(0, 0, 0, 0)"
       body.classList.remove("page-loading");
-      preloader.style.display = "none";
+      preloaderItem[0].style.opacity = "0"
+      preloaderItem[1].style.opacity = "0"
+      preloaderItem[2].style.opacity = "0"
+
+      setTimeout(() => {
+         preloader.style.display = "none";
+
+      }, 1000);
    }
 }
- 
