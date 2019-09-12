@@ -1,5 +1,6 @@
 // scrollAnchor();      // скрол у якоря
 chechURL();
+preloader();
 headerFidex();// фиксация header при скроле
 slideReviews();
 sliderPost();
@@ -246,10 +247,14 @@ function chechURL() {
 
 
 function preloader(params) {
-   const preloader = document.getElementsByClassName("preloader_js")[0]
+   const body = document.body;
+   const preloader = document.getElementsByClassName("preloader_js")[0];
+
+   body.classList = "page-loading";
+
    window.onload = () => {
-      console.log(preloader);
-      preloader.style.display = "none"
+      body.classList.remove("page-loading");
+      preloader.style.display = "none";
    }
 }
-preloader()
+ 
