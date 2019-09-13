@@ -55,17 +55,15 @@ function slideSpecialists() {
 }
 
 
-if (window.location.pathname != "/index.html") {
+if (window.location.pathname != "/index.html" && document.body.clientWidth > 750) {
    let scrollBgFilter = () => {
       const bgSite = document.querySelector(".bg-site");
       window.addEventListener("scroll", () => {
          let filter = window.pageYOffset / 1200;
-
          let scale = window.pageYOffset / 15000;
-         scale++ ;
+         scale++;
          if (scale < 1) scale = 1;
          bgSite.style.filter = `blur(${filter}px)`;
-
          bgSite.style.transform = `scale(${scale})`;
       })
    }
