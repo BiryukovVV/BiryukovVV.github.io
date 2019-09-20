@@ -60,7 +60,7 @@ if (window.location.pathname != "/index.html" && document.body.clientWidth > 750
       const bgSite = document.querySelector(".bg-site");
       window.addEventListener("scroll", () => {
          let filter = window.pageYOffset / 1200;
-         let scale = window.pageYOffset / 15000;
+         let scale = window.pageYOffset / 25000;
          scale++;
          if (scale < 1) scale = 1;
          bgSite.style.filter = `blur(${filter}px)`;
@@ -234,7 +234,7 @@ function headerFidex() {
       }
 
    })
-   152
+   // 152
 }
 
 
