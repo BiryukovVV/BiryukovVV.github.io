@@ -1,5 +1,5 @@
 // анимация фона при скроле на 60 строчке , вызывается если страница не index
-// scrollAnchor();      // скрол у якоря
+scrollAnchor();      // скрол у якоря
 chechURL();
 preloader();
 headerFidex();// фиксация header при скроле
