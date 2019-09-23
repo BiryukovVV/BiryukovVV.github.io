@@ -5,7 +5,7 @@
    let addBtnViewOurServices = document.createElement("a");
    let addBtnDownloadPatent = document.createElement("a");
    // открыть модалку при нажатии на  addBtnContactUs 
-   addBtnContactUs.href = "wdw";
+   addBtnContactUs.href = "";
    addBtnViewOurServices.href = "what-we-do.html";
    addBtnDownloadPatent.href = "";
 
